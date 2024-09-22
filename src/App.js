@@ -7,14 +7,11 @@ function App() {
   const [keyword, setKeyword] = useState("");
   const onClick = () => setCounter((counter) => counter + 1);
   const onChange = (event) => setKeyword(event.target.value);
-  console.log("i run all the time");
   useEffect(() => {
-    console.log("CALL THE API....");
+    console.log("I run only once.");
   }, []);
   useEffect(() => {
-    if (keyword !== "" && keyword.length > 5) {
-      console.log("SEARCH FOR", keyword);
-    }
+      console.log("I run when 'keyword' changes.");
   }, [keyword]);
   useEffect(() => {
     console.log("I run when 'counter' changes.");
